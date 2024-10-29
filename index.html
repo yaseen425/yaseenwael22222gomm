@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Egyptian Football Clubs Logos</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        .logo-container {
+            width: 200px;
+            height: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .logo-container img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin: 10px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            background-color: #333;
+            color: white;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #555;
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>Egyptian Football Clubs Logos</h1>
+
+    <div class="logo-container">
+        <img id="clubLogo" src="https://upload.wikimedia.org/wikipedia/en/thumb/1/15/Al_Ahly_SC_logo.png/200px-Al_Ahly_SC_logo.png" alt="Al Ahly Logo">
+    </div>
+
+    <button onclick="changeLogo('ahly')">الأهلي</button>
+    <button onclick="changeLogo('zamalek')">الزمالك</button>
+    <button onclick="changeLogo('ismaily')">الإسماعيلي</button>
+
+    <script>
+        function changeLogo(club) {
+            var logo = document.getElementById('clubLogo');
+            
+            if (club === 'ahly') {
+                logo.src = 'https://upload.wikimedia.org/wikipedia/en/thumb/1/15/Al_Ahly_SC_logo.png/200px-Al_Ahly_SC_logo.png';
+                logo.alt = 'Al Ahly Logo';
+            } else if (club === 'zamalek') {
+                logo.src = 'https://upload.wikimedia.org/wikipedia/en/thumb/5/5e/Zamalek_SC.png/200px-Zamalek_SC.png';
+                logo.alt = 'Zamalek Logo';
+            } else if (club === 'ismaily') {
+                logo.src = 'https://upload.wikimedia.org/wikipedia/en/thumb/1/16/Ismaily_SC_logo.png/200px-Ismaily_SC_logo.png';
+                logo.alt = 'Ismaily Logo';
+            }
+        }
+    </script>
+
+</body>
+</html>
